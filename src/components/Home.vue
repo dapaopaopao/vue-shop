@@ -1,10 +1,16 @@
 <template>
-  <div>主页</div>
+  <el-button tpye="info" @click="loginout"></el-button>
 </template>
 
 <script>
 export default {
-  data () {}
+  data () {},
+  methods: {
+    loginout () {
+      window.sessionStorage.clear()
+      this.$router.push('/login')
+    }
+  }
 }
 </script>
 
